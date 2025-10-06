@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-4 w-50">
+    <h2>{{ book.title }} ({{ book.author }})</h2>
+    <p><strong>Год:</strong> {{ book.year_published }}</p>
+    <p><strong>Статус:</strong> {{ book.is_deleted|yesno:"Удалена,Активна" }}</p>
+
+    {% if book.detail %}
+        <h3>Детали</h3>
+        <p><strong>Описание:</strong> {{ book.detail.summary }}</p>
+        <p><strong>Страниц:</strong> {{ book.detail.page_count }}</p>
+    {% endif %}
+
+    <a href="{% url 'book_update' book.pk %}" class="btn btn-warning me-2">Редактировать</a>
+    <a href="{% url 'book_delete' book.pk %}"class="btn btn-danger me-2">Удалить</a>
+    <a href="{% url 'book_list' %}" class="btn btn-secondary me-2">Отменить</a>
+
+</div>
+{% endblock %}

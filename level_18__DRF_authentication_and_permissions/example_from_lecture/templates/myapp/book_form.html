@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2>{{ form_action }} книгу</h2>
+    <form method="post" class="w-50">
+        {% csrf_token %}
+        <fieldset>
+            <legend>Book</legend>
+            {{ book_form.as_p }}
+        </fieldset>
+        <fieldset>
+            <legend>Book Detail</legend>
+            {{ detail_form.as_p }}
+        </fieldset>
+        <button type="submit" class="btn btn-primary me-2">{{ form_action }}</button>
+        <a href="{% url 'book_list' %}" class="btn btn-secondary">Отменить</a>
+    </form>
+</div>
+{% endblock %}
