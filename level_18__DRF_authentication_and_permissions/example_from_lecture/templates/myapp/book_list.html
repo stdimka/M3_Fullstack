@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Books{% endblock %}
+
+{% block content %}
+    <div class="container mt-4 mb-4">
+        <h2>Books List</h2>
+        <a href="{% url 'edit_all_books' %}" class="btn btn-warning me-3">Edit ALL Books</a>
+        <a href="{% url 'book_create' %}" class="btn btn-primary">Add Book</a>
+    </div>
+
+    {% if object_list %}
+
+        <table class="table table-hover table-bordered align-middle">
+            <thead class="table-light">
+                <tr>
+                    <th>Author</th>
+                    <th>Title</th>
+                    <th class="text-center" style="width: 200px;">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for book in object_list %}
+                    <tr>
+                        <td>{{ book.author.name }}</td>
+                        <td>{{ book.title }}</td>
+                        <td class="text-center">
+                            <a href="{% url 'book_detail' book.pk %}" class="btn btn-sm btn-info">View</a>
+                            <a href="{% url 'book_update' book.pk %}" class="btn btn-sm btn-warning">Edit</a>
+                            <a href="{% url 'book_delete' book.pk %}" class="btn btn-sm btn-danger">Delete</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <div class="alert alert-warning" role="alert">
+            Sorry, no data in this list.
+        </div>
+    {% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block content %}
+<h1>Профиль пользователя</h1>
+
+{# Вставка блока с данными пользователя #}
+<ul>
+    {% for user in users %}
+    <li>
+        {% include "shop/includes/user_card.html" with user=user %}
+    </li>
+    {% endfor %}
+</ul>
+
+<p>Здесь может быть дополнительная информация...</p>
+{% endblock %}

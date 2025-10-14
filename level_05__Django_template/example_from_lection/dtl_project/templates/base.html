@@ -1,0 +1,23 @@
+{% load static %}  <!-- Должно быть в первой строке html-файла! -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Должно быть внутри header -->
+    {% block style %}
+        <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    {% endblock %}
+    <title>{% block title %}Мой сайт{% endblock %}</title>
+</head>
+<body>
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+    <h2>From base page</h2>
+    <!-- Должно быть в самом конце body -->
+
+    {% block custom_js %}
+        <script src="{% static 'js/script.js' %}"></script>
+    {% endblock %}
+</body>
+</html>

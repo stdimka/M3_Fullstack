@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-4">
+    <h1 class="mb-4">Список авторов</h1>
+
+    <ul class="list-group">
+        {% for author in authors %}
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                {{ author.name }}
+                <div>
+                    {# Временно отключена ссылка редактирования #}
+                    <a href="{% url 'author_edit' author.id %}" class="btn btn-sm btn-warning">Редактировать</a>
+                    {# <a href="{% url 'book_update' 1 %}" class="btn btn-sm btn-warning">Редактировать</a> #}
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

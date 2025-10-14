@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Myapp Page{% endblock %}
+
+{% block content %}
+<h2>This is Myapp Page</h2>
+<ul>
+{% for obj in object_list %}
+    <li>{{ obj.code }} - {{ obj.value }}</li>
+{% empty %}
+    <li>Sorry, no data in this list.</li>
+{% endfor %}
+</ul>
+
+{% endblock %}
