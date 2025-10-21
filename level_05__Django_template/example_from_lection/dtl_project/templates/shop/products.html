@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Продукты{% endblock %}
+
+{% block content %}
+    <h1>{{ data.title }}</h1>
+    <p>{{ data.description }}</p>
+
+    <ul>
+      {% for item in data.items %}
+        <li>{{ item.name | upper }} — {{ item.price }} $</li>
+      {% endfor %}
+    </ul>
+
+    <h2>Товары по индексу:</h2>
+    <p>Первый товар: {{ data.items.0.name }} — {{ data.items.0.price }} $</p>
+    <p>Второй товар: {{ data.items.1.name }} — {{ data.items.1.price }} $</p>
+
+{% endblock %}
