@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% load static %}
+{% load custom_filters %}
+
+
+{% block title %}Main page{% endblock %}
+
+
+{% block content %}
+    <h1>Main page</h1>
+
+
+    {% with price=987564123.9867 %}
+      {{ price | currency_format:"usd" }} <br>
+      {{ price | currency_format:"euro" }}<br>
+      {{ price | currency_format }}
+    {% endwith %}
+    <br><br><br>
+    <div class="py-5 text-center">
+        <h1 class="display-4">Добро пожаловать на сайт!</h1>
+        <p class="lead">Это главная страница. Bootstrap подключён и работает 🎉</p>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <img src="{% static 'img/sample.jpg' %}" class="card-img-top" alt="Пример">
+                <div class="card-body">
+                    <h5 class="card-title">Карточка 1</h5>
+                    <p class="card-text">Пример карточки с Bootstrap. Можно использовать для товаров, профилей и прочего.</p>
+                    <a href="#" class="btn btn-primary">Подробнее</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Карточка 2</h5>
+                    <p class="card-text">Просто пример второй карточки. Можешь скопировать и адаптировать под свой контент.</p>
+                    <a href="#" class="btn btn-success">Действие</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br><br><br>
+    <img src="{% static 'img/cat.jpg' %}" alt="img">
+{% endblock %}

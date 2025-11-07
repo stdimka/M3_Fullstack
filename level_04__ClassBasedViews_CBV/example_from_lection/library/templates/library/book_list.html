@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <h1>Список книг</h1>
+
+    <ul>
+      {% for book in books %}
+        <li>
+          {{ book.title }} — {{ book.author }}
+          [<a href="{% url 'book-detail' book.pk %}">Детализация</a>]
+          [<a href="{% url 'book-edit' book.pk %}">Изменить</a>]
+          [<a style="color: red" href="{% url 'book-delete' book.pk %}">🗑️ Удалить книгу</a>]
+        </li>
+      {% empty %}
+        <li>Книг нет</li>
+      {% endfor %}
+    </ul>
+
+    {% if is_paginated %}
+      <div>
+        {% if page_obj.has_previous %}
+          <a href="?page={{ page_obj.previous_page_number }}">Назад</a>
+        {% endif %}
+
+        Страница {{ page_obj.number }} из {{ page_obj.paginator.num_pages }}
+
+        {% if page_obj.has_next %}
+          <a href="?page={{ page_obj.next_page_number }}">Вперёд</a>
+        {% endif %}
+      </div>
+    {% endif %}
+
+</body>
+</html>

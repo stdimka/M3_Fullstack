@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="container py-4">
+    <h1 class="mb-4">Редактирование книг</h1>
+
+    <form method="post" class="card p-3 shadow-sm bg-white">
+        {% csrf_token %}
+        {{ formset.management_form }}
+
+        <div class="table-responsive">
+            <table class="table table-bordered align-middle">
+                <thead class="table-secondary">
+                <tr>
+                    <th>Автор</th>
+                    <th>Название</th>
+                    <th>Год</th>
+                    <th>Удалена?</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for form in formset %}
+                    <tr>
+                        <td>{{ form.author }}</td>
+                        <td>{{ form.title }}</td>
+                        <td>{{ form.year_published }}</td>
+                        <td class="text-center">{{ form.is_deleted }}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        <div class="d-flex justify-content-between mt-3">
+            <a href="{% url 'edit_all_books' %}" class="btn btn-secondary">Отменить</a>
+            <button type="submit" class="btn btn-primary">Сохранить изменения</button>
+        </div>
+    </form>
+</div>
+
+{% endblock %}

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <h1>{{ book.title }}</h1>
+    <p><strong>Автор:</strong> {{ book.author }}</p>
+    <p><strong>Год издания:</strong> {{ book.year }}</p>
+    <p><strong>Описание:</strong> {{ book.description }}</p>
+
+    <a href="{% url 'books' %}">← Назад к списку книг</a>
+
+</body>
+</html>

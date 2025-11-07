@@ -1,0 +1,376 @@
+[
+    {
+        "model": "myapp.author",
+        "pk": 1,
+        "fields": {
+            "name": "Лев Толстой"
+        }
+    },
+    {
+        "model": "myapp.book",
+        "pk": 1,
+        "fields": {
+            "author": 1,
+            "title": "Война и мир",
+            "year_published": 1869,
+            "is_deleted": false,
+            "genres": [1, 2, 3]
+        }
+    },
+    {
+        "model": "myapp.bookdetail",
+        "pk": 1,
+        "fields": {
+            "book": 1,
+            "summary": "Эпический роман о судьбах дворянства на фоне войны 1812 года.",
+            "page_count": 1225
+        }
+    },
+    {
+        "model": "myapp.author",
+        "pk": 2,
+        "fields": {
+            "name": "Фёдор Достоевский"
+        }
+    },
+    {
+        "model": "myapp.book",
+        "pk": 2,
+        "fields": {
+            "author": 2,
+            "title": "Преступление и наказание",
+            "year_published": 1866,
+            "is_deleted": false,
+            "genres": [1, 3, 4]
+        }
+    },
+    {
+        "model": "myapp.bookdetail",
+        "pk": 2,
+        "fields": {
+            "book": 2,
+            "summary": "Драма о внутренней борьбе бедного студента, совершившего убийство.",
+            "page_count": 671
+        }
+    },
+    {
+        "model": "myapp.author",
+        "pk": 3,
+        "fields": {
+            "name": "Александр Пушкин"
+        }
+    },
+    {
+        "model": "myapp.book",
+        "pk": 3,
+        "fields": {
+            "author": 3,
+            "title": "Евгений Онегин",
+            "year_published": 1833,
+            "is_deleted": false,
+            "genres": [1, 3]
+        }
+    },
+    {
+        "model": "myapp.bookdetail",
+        "pk": 3,
+        "fields": {
+            "book": 3,
+            "summary": "Роман в стихах о светском человеке, любви и разочаровании.",
+            "page_count": 320
+        }
+    },
+    {
+        "model": "myapp.author",
+        "pk": 4,
+        "fields": {
+            "name": "Уильям Шекспир"
+        }
+    },
+    {
+        "model": "myapp.book",
+        "pk": 4,
+        "fields": {
+            "author": 4,
+            "title": "Гамлет",
+            "year_published": 1603,
+            "is_deleted": false,
+            "genres": [3, 5]
+        }
+    },
+    {
+        "model": "myapp.bookdetail",
+        "pk": 4,
+        "fields": {
+            "book": 4,
+            "summary": "Трагедия о мести и предательстве в датском королевстве.",
+            "page_count": 250
+        }
+    },
+    {
+        "model": "myapp.author",
+        "pk": 5,
+        "fields": {
+            "name": "Мигель де Сервантес"
+        }
+    },
+    {
+        "model": "myapp.book",
+        "pk": 5,
+        "fields": {
+            "author": 5,
+            "title": "Дон Кихот",
+            "year_published": 1605,
+            "is_deleted": false,
+            "genres": [1, 3, 6]
+        }
+    },
+    {
+        "model": "myapp.bookdetail",
+        "pk": 5,
+        "fields": {
+            "book": 5,
+            "summary": "История благородного безумца, мечтающего о рыцарских подвигах.",
+            "page_count": 1050
+        }
+    },
+    {
+        "model": "myapp.author",
+        "pk": 6,
+        "fields": {
+            "name": "Габриэль Гарсиа Маркес"
+        }
+    },
+    {
+        "model": "myapp.book",
+        "pk": 6,
+        "fields": {
+            "author": 6,
+            "title": "Сто лет одиночества",
+            "year_published": 1967,
+            "is_deleted": false,
+            "genres": [1, 3, 7]
+        }
+    },
+    {
+        "model": "myapp.bookdetail",
+        "pk": 6,
+        "fields": {
+            "book": 6,
+            "summary": "Магический реализм о судьбе семьи Буэндиа в вымышленном городе Макондо.",
+            "page_count": 417
+        }
+    },
+    {
+        "model": "myapp.author",
+        "pk": 7,
+        "fields": {
+            "name": "Франц Кафка"
+        }
+    },
+    {
+        "model": "myapp.book",
+        "pk": 7,
+        "fields": {
+            "author": 7,
+            "title": "Процесс",
+            "year_published": 1925,
+            "is_deleted": false,
+            "genres": [1, 3, 8]
+        }
+    },
+    {
+        "model": "myapp.bookdetail",
+        "pk": 7,
+        "fields": {
+            "book": 7,
+            "summary": "Абсурдистский роман о человеке, которого арестовали, но не объяснили за что.",
+            "page_count": 320
+        }
+    },
+    {
+        "model": "myapp.author",
+        "pk": 8,
+        "fields": {
+            "name": "Джордж Оруэлл"
+        }
+    },
+    {
+        "model": "myapp.book",
+        "pk": 8,
+        "fields": {
+            "author": 8,
+            "title": "1984",
+            "year_published": 1949,
+            "is_deleted": false,
+            "genres": [3, 9, 10]
+        }
+    },
+    {
+        "model": "myapp.bookdetail",
+        "pk": 8,
+        "fields": {
+            "book": 8,
+            "summary": "Антиутопия о тоталитарном обществе, где Большой Брат следит за всеми.",
+            "page_count": 328
+        }
+    },
+    {
+        "model": "myapp.author",
+        "pk": 9,
+        "fields": {
+            "name": "Николай Гоголь"
+        }
+    },
+    {
+        "model": "myapp.book",
+        "pk": 9,
+        "fields": {
+            "author": 9,
+            "title": "Мёртвые души",
+            "year_published": 1842,
+            "is_deleted": false,
+            "genres": [1, 3, 6]
+        }
+    },
+    {
+        "model": "myapp.bookdetail",
+        "pk": 9,
+        "fields": {
+            "book": 9,
+            "summary": "Сатирическое путешествие помещика Чичикова по губерниям в поисках мёртвых душ.",
+            "page_count": 430
+        }
+    },
+    {
+        "model": "myapp.author",
+        "pk": 10,
+        "fields": {
+            "name": "Антон Чехов"
+        }
+    },
+    {
+        "model": "myapp.book",
+        "pk": 10,
+        "fields": {
+            "author": 10,
+            "title": "Вишнёвый сад",
+            "year_published": 1904,
+            "is_deleted": false,
+            "genres": [3, 4, 11]
+        }
+    },
+    {
+        "model": "myapp.bookdetail",
+        "pk": 10,
+        "fields": {
+            "book": 10,
+            "summary": "Пьеса о закате дворянской усадьбы и смене эпох.",
+            "page_count": 120
+        }
+    },
+    {
+        "model": "myapp.book",
+        "pk": 11,
+        "fields": {
+            "author": 3,
+            "title": "Станционный смотритель",
+            "year_published": 1831,
+            "is_deleted": false,
+            "genres": [3, 4, 12]
+        }
+    },
+    {
+        "model": "myapp.bookdetail",
+        "pk": 11,
+        "fields": {
+            "book": 11,
+            "summary": "Короткий рассказ о скромном чиновнике и его трагичной семейной истории.",
+            "page_count": 45
+        }
+    },
+    {
+        "model": "myapp.genre",
+        "pk": 1,
+        "fields": {
+            "name": "Роман"
+        }
+    },
+    {
+        "model": "myapp.genre",
+        "pk": 2,
+        "fields": {
+            "name": "Исторический"
+        }
+    },
+    {
+        "model": "myapp.genre",
+        "pk": 3,
+        "fields": {
+            "name": "Классика"
+        }
+    },
+    {
+        "model": "myapp.genre",
+        "pk": 4,
+        "fields": {
+            "name": "Драма"
+        }
+    },
+    {
+        "model": "myapp.genre",
+        "pk": 5,
+        "fields": {
+            "name": "Трагедия"
+        }
+    },
+    {
+        "model": "myapp.genre",
+        "pk": 6,
+        "fields": {
+            "name": "Сатира"
+        }
+    },
+    {
+        "model": "myapp.genre",
+        "pk": 7,
+        "fields": {
+            "name": "Магический реализм"
+        }
+    },
+    {
+        "model": "myapp.genre",
+        "pk": 8,
+        "fields": {
+            "name": "Экзистенциализм"
+        }
+    },
+    {
+        "model": "myapp.genre",
+        "pk": 9,
+        "fields": {
+            "name": "Антиутопия"
+        }
+    },
+    {
+        "model": "myapp.genre",
+        "pk": 10,
+        "fields": {
+            "name": "Фантастика"
+        }
+    },
+    {
+        "model": "myapp.genre",
+        "pk": 11,
+        "fields": {
+            "name": "Пьеса"
+        }
+    },
+    {
+        "model": "myapp.genre",
+        "pk": 12,
+        "fields": {
+            "name": "Рассказ"
+        }
+    }
+]

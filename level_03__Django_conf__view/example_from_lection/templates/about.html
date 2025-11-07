@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>About page</h1>
+
+    <a href="{% url 'home' %}">Home page</a>
+    <a href="{% url 'blog:home' %}">Blog page</a>
+    <a href="{% url 'blog:article' 100 %}">Article 100</a>
+
+</body>
+</html>

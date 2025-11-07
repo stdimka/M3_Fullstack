@@ -1,0 +1,159 @@
+[
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "username": "AmberAleFanatic",
+      "password": "pbkdf2_sha256$600000$+sa1XobPsJEQtmtT$NyeRuV4qQFR/lQDXSxA7z7WW454K93eQ+JI1HHTCZqg=",
+      "is_active": true,
+      "is_staff": false,
+      "is_superuser": false,
+      "first_name": "",
+      "last_name": "",
+      "email": ""
+    }
+  },
+  {
+    "model": "shop.product",
+    "pk": 1,
+    "fields": {
+      "name": "Caramel Malt 60L",
+      "slug": "caramel-malt-60l",
+      "description": "Caramel Malt 60L (also known as Crystal 60L) is a versatile specialty malt that is a secret weapon for many brewers to enhance beer color, flavor, and body. It imparts a beautiful copper-amber hue to the brew.\n\nThe flavor of this malt is characterized by distinct notes of caramel, toffee, and light hints of toasted bread. It adds a pleasant sweetness to the beer that beautifully balances hop bitterness and also contributes to improved head retention.\n\nCaramel Malt 60L is ideal for a wide range of styles, from Pale Ales and Amber Ales to Porters and Stouts, adding complexity and depth.",
+      "price": "3.00",
+      "unit": "1 lb",
+      "category_id": 1,
+      "image": "products/caramel_malt.jpg",
+      "specs": {
+        "Origin": "USA / Belgium",
+        "Type": "Crystal/Caramel Malt",
+        "Color (°L)": "60 °L",
+        "Moisture": "5.0% max",
+        "Extract FG, Dry": "75%",
+        "Flavor Profile": "Sweet, caramel, toffee, hints of toasted bread",
+        "Usage": "Typically 3-15% of the grist",
+        "Recommended Beer Styles": "Pale Ale, Amber Ale, IPA, Brown Ale, Porter, Stout, Scotch Ale"
+      },
+      "is_active": true,
+      "stock": 100,
+      "created_at": "2025-10-21T00:00:00Z",
+      "updated_at": "2025-10-21T00:00:00Z"
+    }
+  },
+  {
+    "model": "shop.product",
+    "pk": 2,
+    "fields": {
+      "name": "Cascade Hops",
+      "slug": "cascade-hops",
+      "description": "Cascade is arguably the most famous hop in the American craft brewing revolution. Developed in Oregon, it has a unique floral and citrus character that defined the taste of the classic American Pale Ale.\n\nIts moderate bitterness and vibrant aroma, with notes of grapefruit, orange, and light floral undertones, make it incredibly versatile. Cascade is excellent for both bittering and late kettle additions or for dry hopping.\n\nThis hop is a reliable choice for brewers looking to create a refreshing, balanced, and recognizable ale.",
+      "price": "7.49",
+      "unit": "100g",
+      "category_id": 1,
+      "image": "products/cascade_hops.jpg",
+      "specs": {
+        "Origin": "USA",
+        "Type": "Aroma (Dual-Purpose)",
+        "Alpha Acids": "4.5% - 7.0%",
+        "Beta Acids": "4.5% - 7.0%",
+        "Aroma Profile": "Medium-intensity floral, citrus (grapefruit), and spicy notes.",
+        "Cohumulone": "33% - 40%",
+        "Total Oil": "0.8 - 1.5 mL/100g",
+        "Recommended Beer Styles": "American Pale Ale, IPA, Porter, Barleywine, Witbier"
+      },
+      "is_active": true,
+      "stock": 100,
+      "created_at": "2025-10-21T00:00:00Z",
+      "updated_at": "2025-10-21T00:00:00Z"
+    }
+  },
+  {
+    "model": "shop.review",
+    "pk": 1,
+    "fields": {
+      "product": 1,
+      "user": 1,
+      "rating": 5,
+      "comment": "The Perfect Sweet Spot\n60L is my favorite caramel malt. It's not too light and not too dark. It provides the perfect balance of sweetness and caramel flavor for my Amber Ales. The color comes out just gorgeous.",
+      "created_at": "2025-10-21T00:00:00Z"
+    }
+  },
+  {
+    "model": "shop.review",
+    "pk": 2,
+    "fields": {
+      "product": 1,
+      "user": 2,
+      "rating": 5,
+      "comment": "Never Brew Without It\nI add a bit of C60 to almost every recipe. It improves head retention and gives the beer a finished quality that's hard to achieve otherwise. Works great in IPAs to balance the bitterness.",
+      "created_at": "2025-10-21T00:00:00Z"
+    }
+  },
+  {
+    "model": "shop.order",
+    "pk": 1,
+    "fields": {
+      "user": 1,
+      "order_id": "ORDER001",
+      "status": "paid",
+      "total_price": "9.00",
+      "created_at": "2025-10-21T00:00:00Z",
+      "updated_at": "2025-10-21T00:00:00Z"
+    }
+  },
+  {
+    "model": "shop.orderitem",
+    "pk": 1,
+    "fields": {
+      "order": 1,
+      "product": 1,
+      "quantity": 2,
+      "price": "3.00"
+    }
+  },
+  {
+    "model": "shop.orderitem",
+    "pk": 2,
+    "fields": {
+      "order": 1,
+      "product": 2,
+      "quantity": 1,
+      "price": "7.49"
+    }
+  },
+  {
+    "model": "shop.review",
+    "pk": 35,
+    "fields": {
+      "product": 12,
+      "user": 35,
+      "rating": 5,
+      "comment": "Great for Beginners\nWhen I was just starting to brew, this was the yeast recommended to me, and I have no regrets. It's very forgiving with temperature and handles many beginner mistakes.",
+      "created_at": "2025-10-21T00:00:00Z"
+    }
+  },
+  {
+    "model": "shop.order",
+    "pk": 2,
+    "fields": {
+      "user": 4,
+      "order_id": "ORDER002",
+      "status": "pending",
+      "total_price": "0.00",
+      "created_at": "2025-10-21T00:00:00Z",
+      "updated_at": "2025-10-21T00:00:00Z"
+    }
+  },
+  {
+    "model": "shop.order",
+    "pk": 3,
+    "fields": {
+      "user": 7,
+      "order_id": "ORDER003",
+      "status": "cart",
+      "total_price": "0.00",
+      "created_at": "2025-10-21T00:00:00Z",
+      "updated_at": "2025-10-21T00:00:00Z"
+    }
+  }
+]
